@@ -1,0 +1,46 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="main-content">
+  <div class="auth-container">
+    <div class="breadcrumb">
+      Início &gt; 
+      <strong>Laboratório de Germinares</strong>
+    </div>
+
+    <h1>Cadastrar Aluno</h1>
+
+   
+    <div class="steps-navigation">
+      <div class="step">
+      <div class="step active">
+        <span class="step-number">1</span>
+        <strong>Informações Básicas</strong>
+      </div>
+      </div>
+      <div class="connector"></div>
+      <span class="step-number">2</span>
+        <strong>Notas</strong>
+      
+    </div>
+    
+
+    <form>
+      <input type="email" [(ngModel)]="email" placeholder="E-mail" name="email" required />
+      <input type="text" placeholder="Nome Completo"name="email" required />
+      <input type="text" placeholder="Gênero" name="email" required />
+      <input type="text" placeholder="Data de Nascimento" onfocus="this.type='date'" 
+      onblur="if (!this.value) this.type='text'" name="data_nascimento" required />
+      <input type="text" placeholder="Tipo de alimentação"name="email" required />
+      <input type="text" placeholder="Escolaridade Pais"name="email" required />
+
+      <div class="button-group">
+        <button class="btn primary" (click)="descartar()">Descartar</button>
+        <button class="btn secondary" (click)="proximo()">Próximo</button>
+      </div>
+    </form>
+    
+  </div>
+</div>
+
+
