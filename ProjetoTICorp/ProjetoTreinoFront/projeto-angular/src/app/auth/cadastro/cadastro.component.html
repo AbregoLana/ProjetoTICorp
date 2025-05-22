@@ -1,0 +1,29 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="main-content">
+  <div class="auth-container">
+    <div class="breadcrumb">
+      Início &gt; <strong>Laboratório de Germinares</strong>
+    </div>
+    <h1>Cadastro</h1>
+    <p>Preencha os campos a seguir</p>
+
+    <form>
+      <input type="email" placeholder="E-mail" name="email" [(ngModel)]="email" required />
+      <input type="password" placeholder="Senha" name="password"  [(ngModel)]="password" required />
+      <input type="text" placeholder="Nome" name="nome"  [(ngModel)]="nome" required />
+      <input type="text" placeholder="Gênero" name="genero"  [(ngModel)]="genero" required />
+      <input type="text" placeholder="Data de Nascimento"  [(ngModel)]="data_nascimento" onfocus="this.type='date'" 
+      onblur="if (!this.value) this.type='text'" name="data_nascimento" required>
+      <input type="text" placeholder="Tipo de alimentação" name="tipo_alimentacao" [(ngModel)]="tipo_alimentacao" required />
+
+      <div class="button-group">
+        <button type="button" class="btn primary" (click)="fazerCadastro()">
+          <img src="../../assets/iconCadastro.png" alt="" />
+          Cadastrar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

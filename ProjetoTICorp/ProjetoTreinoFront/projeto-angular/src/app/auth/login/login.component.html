@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="main-content">
+  <div class="auth-container">
+    <div class="breadcrumb">
+      Início &gt; <strong>Laboratório de Germinares</strong>
+    </div>
+    <h1>Laboratório de Germinares</h1>
+    <p>Realize o login! Caso seja seu primeiro acesso, faça o cadastro.</p>
+
+    <form (submit)="fazerLogin($event)">
+      <input type="email" placeholder="E-mail" name="email" [(ngModel)]="email" required />
+      <input type="password" placeholder="Senha" name="password" [(ngModel)]="password" required />
+
+      <div class="button-group">
+        <button type="button" class="btn primary" (click)="fazerCadastro()">
+          <img src="../../assets/iconCadastro.png" alt=""> Cadastrar
+        </button>
+        <button type="submit" class="btn secondary" (click)="fazerLogin()">
+          <img src="../../assets/iconLogin.png" alt=""> Fazer login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de Erro de Login -->
+<div class="overlay" *ngIf="loginRejeitado" >
+  <div class="card" >
+    <div class="header">
+      <img src="../../assets/boneca.png" alt="Ícone de erro" class="modal-img">
+    </div>
+    <div class="content">
+      <div class="title">Você não está cadastrado no sistema</div>
+      <div class="description">Tente realizar o cadastro</div>
+    </div>
+    <div class="footer">
+      <button class="close-button" (click)="fecharErro()">Fechar</button>
+    </div>
+  </div>
+</div>

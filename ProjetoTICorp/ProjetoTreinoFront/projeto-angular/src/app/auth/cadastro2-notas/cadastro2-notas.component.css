@@ -1,0 +1,134 @@
+.main-content {
+  margin-left: 80px;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: flex-start;
+}
+  
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  margin-top: 40px;
+}
+  
+.breadcrumb {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+  
+h1 {
+ font-size: 20px;
+ font-weight: 600;
+ margin: 0 0 6px 0;
+  color: #111827;
+}
+  
+
+
+.steps-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px; 
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: #ccc;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.connector {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 15px;
+}
+
+.step.active .step-number {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border-color: #28a745;
+}
+
+.step strong {
+  font-size: 12px;
+  color: #666;
+}
+
+  
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+  
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background-color: #fff;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s;
+}
+  
+.button-group {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;   
+  z-index: 1000;
+}
+  
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+  
+.btn.secondary {
+  background-color: #21c25e;
+  color: #fff;
+}
+  
+.btn.secondary:hover {
+  background-color: #1aad55;
+}
+
+img {
+  height: 14px;
+  width: 14px;
+}
+
+

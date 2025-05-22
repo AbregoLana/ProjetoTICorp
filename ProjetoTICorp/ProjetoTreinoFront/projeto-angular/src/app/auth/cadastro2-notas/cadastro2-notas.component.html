@@ -1,0 +1,47 @@
+<app-header></app-header> 
+<app-sidebar></app-sidebar>   
+<div class="main-content">
+  <div class="auth-container">
+    <div class="container">
+      <div class="breadcrumb">
+        Início &gt; 
+        <strong>Laboratório de Germinares</strong>
+      </div>
+
+      <h1>Cadastrar Aluno</h1>
+
+      <div class="steps-navigation">
+        <div class="step">
+          <span class="step-number">1</span>
+          <strong>Informações Básicas</strong>
+        </div>
+        <div class="connector"></div>
+        <div class="step active">
+          <span class="step-number">2</span>
+          <strong>Notas</strong>
+        </div>
+      </div>
+
+    </div>
+
+    <form (ngSubmit)="adicionarNota()">
+      <div class="input-group">
+        <input type="text" [(ngModel)]="novaDisciplina" placeholder="Nome da Disciplina (Ex: Matemática, Português)" name="novaDisciplina" required />
+        <input type="number" [(ngModel)]="novaNota" placeholder="Nota" name="novaNota" required min="0" max="10"/>
+        <button type="submit" class="btn primary">Adicionar Nota</button>
+      </div>
+    </form>
+
+    <div class="notes-list">
+      <h3>Notas Adicionadas (incluindo as fixas após o cadastro):</h3>
+      </div>
+
+    <div class="button-group">
+      <button class="btn primary" (click)="descartar()">Descartar</button>
+      <button class="btn secondary" (click)="cadastrar()">
+        <img src="../../assets/iconCadastro.png" alt="" /> 
+        Cadastrar
+      </button>
+    </div>
+  </div>
+</div>

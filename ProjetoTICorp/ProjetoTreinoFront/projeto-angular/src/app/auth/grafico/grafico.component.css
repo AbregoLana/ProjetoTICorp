@@ -1,0 +1,23 @@
+.breadcrumb {
+    font-size: 0.85rem;
+    color: #444;
+    margin: 90px 0 10px 0;
+    padding-left: 100px; /* compensando o sidebar fixo */
+    font-weight: 500;
+  }
+
+h1 {
+    padding-top: 40px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 30px 100px; /* mesmo recuo do breadcrumb */
+  }
+
+
+p{
+  display: flex ;
+  justify-content: center;
+  padding-top: 100px;
+  font-size: 1.2rem;
+}

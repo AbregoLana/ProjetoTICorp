@@ -1,0 +1,39 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="main-content">
+  <div class="auth-container">
+    <div class="breadcrumb">
+      Início &gt; 
+      <strong>Laboratório de Germinares</strong>
+    </div>
+
+    <h1>Cadastrar Aluno</h1>
+
+    <div class="steps-navigation">
+      <div class="step active">
+        <span class="step-number">1</span>
+        <strong>Informações Básicas</strong>
+      </div>
+      <div class="connector"></div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <strong>Notas</strong>
+      </div>
+    </div>
+
+    <form (ngSubmit)="proximo()" #form="ngForm">
+      <input type="email" [(ngModel)]="email" placeholder="E-mail" name="email" required />
+      <input type="text" [(ngModel)]="nome" placeholder="Nome Completo" name="nome" required />
+      <input type="text" [(ngModel)]="genero" placeholder="Gênero" name="genero" required />
+      <input type="text" [(ngModel)]="data_nascimento" placeholder="Data de Nascimento" onfocus="this.type='date'" onblur="if (!this.value) this.type='text'" name="data_nascimento" required />
+      <input type="text" [(ngModel)]="tipo_alimentacao" placeholder="Tipo de alimentação" name="alimentacao" required />
+      <input type="text" [(ngModel)]="escolaridade_pais" placeholder="Escolaridade Pais" name="escolaridadePais" required />
+      <div class="button-group">
+        <button type="button" class="btn primary" (click)="descartar()">Descartar</button>
+        <button type="submit" class="btn secondary" [disabled]="form.invalid">Próximo</button>
+      </div>
+    </form>
+
+  </div>
+</div>
